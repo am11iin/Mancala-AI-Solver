@@ -2,93 +2,69 @@
 
 ![Mancala](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Mancala_board.jpg/320px-Mancala_board.jpg)
 
-A Python implementation of the classic **Mancala** board game with an AI opponent using **Minimax** and **Alpha-Beta Pruning**. Includes a **graphical interface** built with **Pygame** and supports both Human vs AI and AI vs AI modes.
+A Python implementation of the classic **Mancala** board game featuring an AI opponent powered by **Minimax** and **Alpha-Beta Pruning**. This project includes a polished **graphical interface** built with **Pygame** and supports both Human vs. AI and AI vs. AI gameplay.
 
 ---
 
-## Features
+## 🚀 Features
 
-- 🎮 **Game Modes**
-  - Human vs Computer (AI uses simple heuristic H1)  
-  - Computer vs Computer (P1: strategic heuristic H2, P2: simple heuristic H1)
-  
-- 🧠 **AI Implementation**
-  - Minimax algorithm with depth-limited search  
-  - Alpha-Beta pruning for performance optimization  
-  - Multiple heuristics:
-    - **H1:** Simple heuristic based on store difference  
-    - **H2:** Strategic heuristic including board control
-
-- 🖥️ **Graphical User Interface**
-  - Interactive board using **Pygame**  
-  - Visual representation of seeds in pits and stores  
-  - Real-time game status and turn indicators  
-  - Clickable pits for human moves
-
-- ♟️ **Game Rules**
-  - Standard Mancala rules  
-  - Extra turn when last seed lands in own store  
-  - Capture opponent's seeds when landing in empty own pit  
-  - Automatic game over detection and winner calculation
+* 🎮 **Multiple Game Modes**
+    * **Human vs. Computer:** Challenge the AI (utilizing heuristic H1).
+    * **Computer vs. Computer:** Watch two AIs battle (P1: Strategic H2 vs. P2: Simple H1).
+* 🧠 **Advanced AI Logic**
+    * **Minimax Algorithm:** Depth-limited search for optimal decision making.
+    * **Alpha-Beta Pruning:** Performance optimization to explore deeper branches.
+    * **Heuristic Evaluations:**
+        * **H1 (Simple):** Prioritizes the net difference in store counts.
+        * **H2 (Strategic):** A sophisticated approach considering store differences, board control, and potential captures.
+* 🖥️ **Graphical User Interface**
+    * Interactive board built with **Pygame**.
+    * Dynamic visual representation of seeds in pits and stores.
+    * Real-time turn indicators and game status updates.
+* ♟️ **Standard Ruleset**
+    * Full implementation of standard Mancala rules.
+    * Extra turn mechanics (landing in your own store).
+    * Capture mechanics (landing in an empty pit on your side).
+    * Automatic endgame detection and score calculation.
 
 ---
 
-## Installation
+## 🛠️ Installation
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/am11iin/Mancala-AI-Solver.git
-cd Mancala-AI-Solver
-
-2 . Install dependencies (Python 3.10+ recommended):
-pip install pygame
-
-## Usage
-
-Run the game:
-python mancala.py
-Navigate the menu to choose:
-
-Human vs Computer
-
-Computer vs Computer
-
-Click pits to make moves (Human mode)
-
-Watch the AI think and make moves automatically
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/am11iin/Mancala-AI-Solver.git](https://github.com/am11iin/Mancala-AI-Solver.git)
+   cd Mancala-AI-Solver
 
 
-How AI Works
 
-The AI uses Minimax to evaluate all possible moves up to a depth limit (MAX_DEPTH=4)
+How to Play:
 
-Alpha-Beta pruning improves efficiency by skipping branches that cannot yield better outcomes
+Select Mode: Navigate the main menu to choose your preferred matchup.
 
-Two heuristics guide decision-making:
+Make Moves: In Human mode, simply click on the pit you wish to sow from.
 
-H1 (Simple): Focuses on the difference in store counts
+Watch AI: In AI modes, the AI will automatically calculate and execute moves.
 
-H2 (Strategic): Considers both store differences and seed distribution on the board
+🧠 How the AI Works
+The AI evaluates the game state using a Minimax tree with a default search depth. To handle the computational load, Alpha-Beta Pruning is used to "prune" branches that are guaranteed to be worse than previously explored options.
 
-Screenshots
+H1 (Simple): Focuses solely on the score difference in the stores.
 
-Game Menu with mode selection
+H2 (Strategic): Evaluates the store difference plus the distribution of seeds to maintain board control and maximize capture opportunities.
 
-In-game board view with seeds and AI moves
+🤝 Contributing
+Fork the repository.
 
-Contributing
+Create a new feature branch (git checkout -b feature/YourFeature).
 
-Fork the repository
+Commit your changes (git commit -m 'Add some feature').
 
-Create a new branch
+Push to the branch (git push origin feature/YourFeature).
 
-Make changes and commit
+Open a Pull Request.
 
-Push to your fork and create a pull request
+📜 License
+Distributed under the MIT License. See LICENSE for more information.
 
-License
-
-MIT License © 2025
-Feel free to use and modify this project for educational purposes.
-Check the endgame screen for the winner
+© 2025 [am11iin]
